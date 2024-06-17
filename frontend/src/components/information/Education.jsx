@@ -59,7 +59,7 @@ const Education = () => {
     >
       <div>
         <h2
-          className={`text-3xl font-bold tracking-tight mt-10 sm:text-4xl md:text-5xl flex justify-center lg:mt-10`}
+          className={`text-3xl font-bold tracking-tight mt-10 sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
         >
           <img
             src={theme === "dark" ? E_light : E_dark}
@@ -68,11 +68,11 @@ const Education = () => {
           />
           &nbsp;Education
         </h2>
-        <div className="space-y-6 mt-24 px-4">
+        <div className="space-y-6 mt-24 px-4 lg:px-20">
           {education.map((edu, index) => (
             <div
               key={index}
-              className={`shadow-lg rounded-2xl p-5 md:p-10 border ${theme=="dark"?"border-slate-300":"border-gray-900"} flex md:flex-row flex-col items-center md:w-5xl`}
+              className={`shadow-2xl  p-5 md:p-10 border ${theme=="dark"?"border-slate-300":"border-gray-900"} flex md:flex-row flex-col items-center md:w-5xl rounded-3xl`}
             >
               <div className={`flex md:flex-row flex-col items-center md:items-start`}>
                 <img
@@ -83,7 +83,7 @@ const Education = () => {
                 <div className="md:ml-6 mt-4 md:mt-0 text-center md:text-left">
                   <h3 className="text-2xl font-bold">{edu.degree}</h3>
                   <p className="text-xl mt-2">{edu.institution}</p>
-                  <p className="text-lg mt-1">{edu.cgpa} out of 10</p>
+                  <p className="text-lg mt-1">CGPA : {edu.cgpa} out of 10</p>
                 </div>
               </div>
               <div className="mt-4 md:mt-0 md:ml-auto text-center md:text-right">
