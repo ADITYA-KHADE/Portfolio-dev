@@ -13,9 +13,9 @@ lerna-debug.log*
 
 # Ignore environment variable files
 .env
-/backend/.env
 /frontend/.env
 dist
+
 dist-ssr
 *.local
 
