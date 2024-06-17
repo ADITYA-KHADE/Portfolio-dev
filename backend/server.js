@@ -4,6 +4,7 @@ const path = require("path");
 const multer = require("multer");
 const cookieParser = require("cookie-parser");
 const fs = require('fs');
+console.log(hello);
 
 const dotenv = require("dotenv");
 dotenv.config();
