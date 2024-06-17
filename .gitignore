@@ -6,9 +6,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Ignore node_modules directories in both frontend and backend
 /frontend/node_modules/
-/frontend/dist/
-node_modules/
+/backend/node_modules/
+/node_modules/
+
+# Ignore environment variable files
+.env
+/backend/.env
+/frontend/.env
 dist
 dist-ssr
 *.local
