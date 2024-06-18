@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         poppins: ['Poppins'],
+        'bungee-spice': ['"Bungee Spice"', 'cursive'],
       },
       width: {
         'narrow': '200px',

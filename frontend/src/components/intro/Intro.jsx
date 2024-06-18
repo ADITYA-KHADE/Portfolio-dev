@@ -113,7 +113,7 @@ const Intro = () => {
         theme === "dark"
           ? " text-slate-300"
           : " text-gray-900"
-      }`} onClick={()=>{window.open("https://drive.google.com/file/d/1BHhQ1oNT16jHOKtvoo1fcxSsMN8cg_dR/view?usp=drive_link", "_blank");}}>Resume/CV</button>
+      }`} onClick={()=>{window.open("https://drive.google.com/file/d/1ytYxcm4MMw3pKrjie4ZTk3dMNTw2DArc/view?usp=sharing", "_blank");}}>Resume/CV</button>
         </div>
       </div>
     </div>
