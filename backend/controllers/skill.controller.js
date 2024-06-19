@@ -68,6 +68,7 @@ exports.getSkills = async (req, res) => {
     const skills = await Skills.find({ type: type });
     res.status(200).json(skills);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: error.message });
   }
 };

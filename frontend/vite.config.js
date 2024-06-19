@@ -9,6 +9,7 @@ export default defineConfig({
     host:'0.0.0.0',
     proxy: {
 			"/api": "http://localhost:8000"
+      // "/api": "http://192.168.145.251:3000"
 		},
   },
 })

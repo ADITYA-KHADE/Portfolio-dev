@@ -8,12 +8,12 @@ import Right_light from "../../assets/Icon-assets/square-arrow-right (1).ico";
 const skills = [
   { id: 1, name: "Technology", type: "tech" },
   { id: 2, name: "AI Tools", type: "aitool" },
-  { id: 3, name: "Coding platform", type: "coding" },
+  { id: 3, name: "Coding platforms", type: "coding" },
   { id: 4, name: "Microsoft tools", type: "mstool" },
   { id: 5, name: "Language", type: "language" },
   { id: 6, name: "Cloud Hosting", type: "cloud" },
-  { id: 7, name: "Version control system", type: "vcs" },
-  { id: 8, name: "Development platform", type: "plat" },
+  { id: 7, name: "Version control", type: "vcs" },
+  { id: 8, name: "Dev platform", type: "plat" },
 ];
 
 const Skills = () => {
@@ -31,19 +31,17 @@ const Skills = () => {
 
   const fetchSkills = async (skillType) => {
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/skill/getskills",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ type: skillType }),
-        }
-      );
+      const response = await fetch("/api/skill/getskills", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ type: skillType }),
+      });
 
       if (!response.ok) {
         throw new Error("Failed to fetch skills");
+        console.log(response);
       }
 
       const data = await response.json();
@@ -88,66 +86,99 @@ const Skills = () => {
   };
 
   let gridColsClass = "grid-cols-6";
+  let image_height = "h-28";
+  let image_width = "w-28";
+  let image_div_width = "w-32";
   if (windowWidth < 768) {
     gridColsClass = "grid-cols-3"; // Show 3 columns on smaller screens
   } else if (windowWidth >= 768 && windowWidth < 1024) {
     gridColsClass = "grid-cols-4"; // Show 4 columns on medium screens
   }
 
+  if (windowWidth >= 450 && windowWidth < 490) {
+    image_height = "h-20";
+    image_width = "w-20";
+  } else if (windowWidth < 450) {
+    image_height = "h-16";
+    image_width = "w-16";
+  }
+
+  if (windowWidth >= 490 && windowWidth < 530) {
+    image_div_width = "w-24";
+  } else if (windowWidth >= 450 && windowWidth < 490) {
+    image_div_width = "w-20";
+  } else if (windowWidth < 450) {
+    image_div_width = "w-16";
+  }
+
   return (
     <div
       className={`relative isolate font-poppins overflow-hidden ${
-        theme === "dark"
-          ? "bg-gray-900 text-white"
-          : "bg-white text-gray-900"
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } py-6 lg:py-6 sm:py-32`}
       id="skills"
     >
       <div className="text-center mb-8">
-        <ol className="flex justify-center gap-2 text-xs font-medium items-center">
+        <ol className="flex justify-center  gap-2 sm:gap-2 md:gap-3 px-2 items-center">
           <li>
             <img
               src={theme === "dark" ? Left_dark : Left_light}
               alt="Previous"
-              className="h-10 w-10 cursor-pointer"
+              className="h-12 w-12 cursor-pointer"
               onClick={leftdirection}
             />
           </li>
 
-          <li>
-            <h1 className="block px-1 py-1 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
-              {getPrevSkill().name}
-            </h1>
-          </li>
+          {windowWidth > 573 ? (
+            <li>
+              <h1
+                onClick={leftdirection}
+                className="block px-2 py-1 font-medium text-xs sm:text-sm md:text-lg rounded-3xl border border-gray-300 bg-white text-center leading-8 text-gray-900 cursor-pointer"
+              >
+                {getPrevSkill().name}
+              </h1>
+            </li>
+          ) : (
+            <></>
+          )}
 
-          <li className="block px-1 py-1 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+          <li className="block px-2 py-1 rounded-3xl border-blue-300 font-medium text-lg bg-blue-300 text-center leading-8 text-gray-900 cursor-pointer">
             {skills[current - 1].name}
           </li>
 
-          <li>
-            <h1 className="block px-1 py-1 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
-              {getNextSkill().name}
-            </h1>
-          </li>
+          {windowWidth > 573 ? (
+            <li>
+              <h1
+                onClick={rightdirection}
+                className="block px-2 py-1 font-medium text-lg rounded-3xl border border-gray-300 bg-white text-center leading-8 text-gray-900 cursor-pointer"
+              >
+                {getNextSkill().name}
+              </h1>
+            </li>
+          ) : (
+            <></>
+          )}
 
           <li>
             <img
               src={theme === "dark" ? Right_dark : Right_light}
               alt="Next"
-              className="h-10 w-10 cursor-pointer"
+              className="h-12 w-12 cursor-pointer"
               onClick={rightdirection}
             />
           </li>
         </ol>
       </div>
 
-      <div className={`grid ${gridColsClass}  gap-2 px-20`}>
+      <div className={`grid ${gridColsClass}  gap-3 px-20`}>
         {allSkills.map((skill) => (
           <div
             key={skill._id} // Ensure each item has a unique key
-            className={`flex items-center justify-center p-4 border rounded-lg ${
-              theme === "dark" ? "bg-gray-900 border-gray-900" : "bg-white border-white"
-            } text-gray-800 w-32`}
+            className={`flex flex-col items-center justify-center p-1 border rounded-lg ${
+              theme === "dark"
+                ? "bg-gray-900 border-gray-900"
+                : "bg-white border-white"
+            } text-gray-800 ${image_div_width}`}
           >
             <img
               src={
@@ -156,8 +187,9 @@ const Skills = () => {
                   : `http://localhost:8000${skill.image.light}`
               }
               alt={skill.name}
-              className="h-28 w-28 object-contain"
+              className={`${image_height} ${image_width} object-contain transition-transform duration-200 hover:scale-110`}
             />
+            {windowWidth > 450 ? <h1>{skill.name}</h1> : <></>}
           </div>
         ))}
       </div>
