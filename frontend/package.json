@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.1",
+    "swiper": "^11.1.4",
     "typeface-poppins": "^1.1.13",
     "typeit-react": "^2.7.1",
     "typewriter-effect": "^2.21.0"

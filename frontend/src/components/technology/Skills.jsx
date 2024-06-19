@@ -174,22 +174,32 @@ const Skills = () => {
         {allSkills.map((skill) => (
           <div
             key={skill._id} // Ensure each item has a unique key
-            className={`flex flex-col items-center justify-center p-1 border rounded-lg ${
+            className={`flex flex-col items-center justify-center p-1 border rounded-2xl shadow-2xl transition-transform duration-200 hover:scale-110 ${
               theme === "dark"
-                ? "bg-gray-900 border-gray-900"
-                : "bg-white border-white"
+                ? "bg-gray-900 border-slate-300"
+                : "bg-white border-gray-500"
             } text-gray-800 ${image_div_width}`}
           >
             <img
               src={
                 theme === "dark"
-                  ? `http://localhost:8000${skill.image.dark}`
-                  : `http://localhost:8000${skill.image.light}`
+                  ? `http://192.168.145.251:8000${skill.image.dark}`  // reminder : change this to your own IP address or localhost:8000
+                  : `http://192.168.145.251:8000${skill.image.light}` 
               }
               alt={skill.name}
-              className={`${image_height} ${image_width} object-contain transition-transform duration-200 hover:scale-110`}
+              className={`${image_height} ${image_width} object-contain `}
             />
-            {windowWidth > 450 ? <h1>{skill.name}</h1> : <></>}
+            {windowWidth > 450 ? (
+              <h1
+                className={`${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
+              >
+                {skill.name}
+              </h1>
+            ) : (
+              <></>
+            )}
           </div>
         ))}
       </div>
