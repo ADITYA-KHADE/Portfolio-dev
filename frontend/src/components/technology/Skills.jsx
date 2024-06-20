@@ -4,6 +4,8 @@ import Left_dark from "../../assets/Icon-assets/left-arrow (1).ico";
 import Left_light from "../../assets/Icon-assets/left-arrow.ico";
 import Right_dark from "../../assets/Icon-assets/square-arrow-right.ico";
 import Right_light from "../../assets/Icon-assets/square-arrow-right (1).ico";
+import E_dark from "../../assets/Icon-assets/web-development.ico";
+import E_light from "../../assets/Icon-assets/web-development (2).ico";
 
 const skills = [
   { id: 1, name: "Technology", type: "tech" },
@@ -17,6 +19,7 @@ const skills = [
 ];
 
 const Skills = () => {
+  const Server_Url = import.meta.env.VITE_API_SERVER;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [type, setType] = useState("tech");
   const [current, setCurrent] = useState(1);
@@ -118,6 +121,18 @@ const Skills = () => {
       } py-6 lg:py-6 sm:py-32`}
       id="skills"
     >
+      <div className=" mb-20 ">
+        <h2
+          className={`text-3xl font-bold tracking-tight mt-10 sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
+        >
+          <img
+            src={theme === "dark" ? E_light : E_dark}
+            alt="Education Icon"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+          />
+          &nbsp;Skills and Abilites
+        </h2>
+      </div>
       <div className="text-center mb-8">
         <ol className="flex justify-center  gap-2 sm:gap-2 md:gap-3 px-2 items-center">
           <li>
@@ -183,8 +198,8 @@ const Skills = () => {
             <img
               src={
                 theme === "dark"
-                  ? `http://192.168.145.251:8000${skill.image.dark}`  // reminder : change this to your own IP address or localhost:8000
-                  : `http://192.168.145.251:8000${skill.image.light}` 
+                  ? `${Server_Url}${skill.image.dark}` // reminder : change this to your own IP address or localhost:8000
+                  : `${Server_Url}${skill.image.light}`
               }
               alt={skill.name}
               className={`${image_height} ${image_width} object-contain `}
