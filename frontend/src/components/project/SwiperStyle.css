@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-color: black;
+  border-color: rgb(18, 18, 18);
   border-width: 2px;
   overflow: hidden;
 }

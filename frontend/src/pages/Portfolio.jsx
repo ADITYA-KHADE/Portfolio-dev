@@ -10,6 +10,7 @@ import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
 // import { ThemeProvider } from "../context/Isdarkmode";
+
 import "../App.css"
 const Portfolio = () => {
   return (
@@ -24,7 +25,7 @@ const Portfolio = () => {
             <Education />
             <Skills />
             <Projects />
-            <Achievement />
+            {/* <Achievement /> */}
             <Contact />
             <Footer />
           </>

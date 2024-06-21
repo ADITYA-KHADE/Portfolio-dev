@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 import { Swiper, SwiperSlide } from "swiper/react";
-import E_dark from "../../../public/assets/Icon-assets/checkmark.ico";
-import E_light from "../../../public/assets/Icon-assets/checkmark (2).ico";
+import E_dark from "/assets/Icon-assets/checkmark.ico";
+import E_light from "/assets/Icon-assets/checkmark (2).ico";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -64,7 +64,7 @@ const Projects = () => {
     >
       <div>
         <h2
-          className={`text-3xl font-bold tracking-tight mt-10 sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
+          className={`text-3xl font-bold tracking-tight mt-10 py-4 sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
         >
           <img
             src={theme === "dark" ? E_light : E_dark}
@@ -101,7 +101,9 @@ const Projects = () => {
                 />
                 <div
                   id="container"
-                  className="bg-gray-700 text-slate-300 font-semibold flex flex-col justify-between p-4 h-full"
+                  className={`
+                    ${theme==="dark" ?"bg-gray-900 text-white":"bg-gray-900 text-white"}
+                     font-semibold flex flex-col justify-between p-4 h-full`}
                 >
                   <h3 className="text-xl mb:1 md:mb-2 text-center">
                     {project.name}
@@ -116,8 +118,8 @@ const Projects = () => {
                       }}
                       className={`${
                         theme === "dark"
-                          ? "bg-blue-500 text-white hover:bg-blue-700"
-                          : "text-black bg-slate-300 hover:bg-slate-700"
+                          ? "bg-indigo-400 text-black hover:bg-blue-700"
+                          : "text-black bg-white hover:bg-slate-300"
                       } font-medium sm:font-bold py-1 px-1 lg:py-2 lg:px-2 border-white border-2 rounded-2xl transition-transform duration-200 hover:scale-110`}
                     >
                       Source code
@@ -128,8 +130,8 @@ const Projects = () => {
                       }}
                       className={`${
                         theme === "dark"
-                          ? "bg-blue-500 text-white hover:bg-blue-700"
-                          : "text-black bg-slate-300 hover:bg-slate-700"
+                          ? "bg-indigo-400 text-black hover:bg-blue-700"
+                          : "text-black bg-white hover:bg-slate-300"
                       } font-medium sm:font-bold py-1 px-1 lg:py-2 lg:px-2 border-white border-2 rounded-2xl transition-transform duration-200 hover:scale-110`}                    >
                       Deploy link
                     </button>

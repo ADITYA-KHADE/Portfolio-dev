@@ -1,15 +1,15 @@
 import React from "react";
-import Cat_boy from "../../../public/assets/Icon-assets/cat-boy.png";
-import Phone from "../../../public/assets/Icon-assets/phone.ico";
-import Mail from "../../../public/assets/Icon-assets/email.ico";
-import Map from "../../../public/assets/Icon-assets/map.ico";
-import Linkedin from "../../../public/assets/Icon-assets/linkedin (2).ico";
-import Github from "../../../public/assets/Icon-assets/github.ico";
-import Twitter from "../../../public/assets/Icon-assets/twitter.ico";
-import Instagram from "../../../public/assets/Icon-assets/instagram.ico";
-import Whatsapp from "../../../public/assets/Icon-assets/whatsapp.ico";
-import Telegram from "../../../public/assets/Icon-assets/telegram.ico";
-import Coffee from "../../../public/assets/Icon-assets/coffee.ico";
+import Cat_boy from "/assets/Icon-assets/cat-boy.png";
+import Phone from "/assets/Icon-assets/phone.ico";
+import Mail from "/assets/Icon-assets/email.ico";
+import Map from "/assets/Icon-assets/map.ico";
+import Linkedin from "/assets/Icon-assets/linkedin (2).ico";
+import Github from "/assets/Icon-assets/github.ico";
+import Twitter from "/assets/Icon-assets/twitter.ico";
+import Instagram from "/assets/Icon-assets/instagram.ico";
+import Whatsapp from "/assets/Icon-assets/whatsapp.ico";
+import Telegram from "/assets/Icon-assets/telegram.ico";
+import Coffee from "/assets/Icon-assets/coffee.ico";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 
@@ -30,11 +30,11 @@ const Footer = () => {
   return (
     <div
       className={`relative isolate  font-poppins overflow-hidden ${
-        theme === "dark" ? "bg-gray-900" : "bg-blue-900"
+        theme === "dark" ? "bg-gray-800" : "bg-blue-800"
       } py-6 lg:py-6 sm:py-32`}
       id="footer"
     >
-      <h1 className="text-center text-2xl font-semibold font-bungee-spice transition-transform duration-200 hover:scale-125">
+      <h1 className="text-center text-2xl font-normal font-playwrite ">
         Aditya's Portfolio
       </h1>
       <div
@@ -50,19 +50,19 @@ const Footer = () => {
             <p className=" inline-flex gap-3">
               <img src={Phone} alt="" className="w-10 h-10" />
               <span className="relative top-1 hover:text-yellow-400 transition-transform duration-200 hover:scale-110">
-                +91 99999 99999
+                +91 77987 47090
               </span>
             </p>
             <p className="inline-flex gap-3">
               <img src={Mail} alt="" className="w-10 h-10" />
               <span className="relative top-1 hover:text-yellow-400 transition-transform duration-200 hover:scale-110">
-                admin@gmail.com
+                adityakhade1887@gmail.com
               </span>
             </p>
             <p className="inline-flex gap-3">
               <img src={Map} alt="" className="w-10 h-10 " />
               <span className="relative top-1 hover:text-yellow-400 transition-transform duration-200 hover:scale-110">
-                Mumbai,Maharashtra-444111
+                Akot, Maharashtra-444101
               </span>
             </p>
             <div className="inline-flex gap-3 mt-5">
@@ -70,31 +70,49 @@ const Footer = () => {
                 src={Linkedin}
                 alt="LinkedIn"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://www.linkedin.com/in/aditya-khade/","_blank")
+                }}
               />
               <img
                 src={Github}
                 alt="Github"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://github.com/ADITYA-KHADE","_blank")
+                }}
               />
               <img
                 src={Twitter}
                 alt="Twitter"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://x.com/AdityaK46103791","_blank")
+                }}
               />
               <img
                 src={Instagram}
                 alt="Instagram"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://www.instagram.com/iam_._._aditya/","_blank")
+                }}
               />
               <img
                 src={Whatsapp}
                 alt="WhatsApp"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://wa.link/w6fx2b","_blank")
+                }}
               />
               <img
                 src={Telegram}
                 alt="Telegram"
                 className="w-10 h-10 transition-transform duration-200 hover:scale-110"
+                onClick={()=>{
+                  window.open("https://t.me/+917798747090","_blank")
+                }}
               />
             </div>
           </div>

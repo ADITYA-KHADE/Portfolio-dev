@@ -5,7 +5,7 @@ import {useTheme} from "../../context/Isdarkmode"
 
 const navigation = [
   { name: "Home", href: "#Intro" },
-  { name: "About", href: "#Description" },
+  { name: "About", href: "#About" },
   { name: "Education", href: "#Education" },
   { name: "Skills", href: "#Skills" },
   { name: "Projects", href: "#Projects" },
@@ -92,7 +92,7 @@ const Navbar = () => {
               key={item.name}
               href="#"
               onClick={() => scrollToSection(item.href.slice(1))}
-              className="cursor-pointer text-sm font-semibold leading-6"
+              className="cursor-pointer text-base font-semibold leading-6 "
             >
               {item.name}
             </a>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
-import School from "../../../public/assets/Icon-assets/school.png";
-import College from "../../../public/assets/Icon-assets/college.ico";
-import IIITR from "../../../public/assets/Icon-assets/Indian_Institute_of_Information_Technology,_Ranchi_Logo.png";
-import E_dark from "../../../public/assets/Icon-assets/education-dark.ico";
-import E_light from "../../../public/assets/Icon-assets/education-light.ico";
+import School from "/assets/Icon-assets/school.png";
+import College from "/assets/Icon-assets/college.ico";
+import IIITR from "/assets/Icon-assets/Indian_Institute_of_Information_Technology,_Ranchi_Logo.png";
+import E_dark from "/assets/Icon-assets/education-dark.ico";
+import E_light from "/assets/Icon-assets/education-light.ico";
 
 const education = [
   {
@@ -52,9 +52,9 @@ const Education = () => {
     <div
       className={`relative isolate font-poppins overflow-hidden ${
         theme === "dark"
-          ? "bg-gray-900 text-slate-300"
+          ? "bg-gray-900 text-white"
           : "bg-white text-gray-900"
-      } py-20 sm:py-32`}
+      } py-16 sm:py-32`}
       id="Education"
     >
       <div>
@@ -72,7 +72,9 @@ const Education = () => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className={`shadow-2xl  p-5 md:p-10 border ${theme=="dark"?"border-slate-300":"border-gray-900"} flex md:flex-row flex-col items-center md:w-5xl rounded-3xl`}
+              className={`shadow-2xl  p-5 md:p-10 border ${theme=="dark"?"border-slate-300":"border-gray-900"}
+               flex md:flex-row flex-col items-center 
+               md:w-5xl rounded-3xl transition-transform duration-200 md:hover:scale-110`}
             >
               <div className={`flex md:flex-row flex-col items-center md:items-start`}>
                 <img

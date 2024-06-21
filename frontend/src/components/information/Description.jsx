@@ -1,15 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
-import Github_avatar from "../../../public/assets/Icon-assets/github coding.png";
-import user_dark from "../../../public/assets/Icon-assets/user_dark.ico";
-import user_light from "../../../public/assets/Icon-assets/user_light.ico";
-// const stats = [
-//   { name: "Offices worldwide", value: "12" },
-//   { name: "Full-time colleagues", value: "300+" },
-//   { name: "Hours per week", value: "40" },
-//   { name: "Paid time off", value: "Unlimited" },
-// ];
+import Github_avatar from "/assets/Icon-assets/github coding.png";
+import user_dark from "/assets/Icon-assets/user_dark.ico";
+import user_light from "/assets/Icon-assets/user_light.ico";
+
 const Description = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { theme } = useTheme();
@@ -27,16 +22,16 @@ const Description = () => {
 
   return (
     <div
+      id="About"
       className={`relative isolate font-poppins overflow-hidden ${
         theme === "dark"
-          ? "bg-gray-900 text-slate-300"
+          ? "bg-gray-900 text-white"
           : "bg-white text-gray-900"
-      } py-20 sm:py-32" id="Description`}
+      } py-20 sm:py-28`}
     >
       <h2
         className={`text-3xl font-bold tracking-tight k sm:text-4xl md:text-5xl m flex justify-center ${
           windowWidth <= 1024 ? "mt-14" : ""
-
         }`}
       >
         <img
@@ -52,15 +47,15 @@ const Description = () => {
         }`}
       >
         <div className="mx-auto mt-5 max-w-2xl lg:mx-0">
-          <h1 className="mt-3 ml-2 font-bold text-3xl">
-            I'm Aditya Khade,
-          </h1>
-          <p className="mt-1 ml-2 text-base font-medium">MERN Stack Developer</p>
+          <h1 className="mt-3 ml-2 font-bold text-3xl">I'm Aditya Khade,</h1>
+          <p className="mt-1 ml-2 text-base font-medium">
+            MERN Stack Developer
+          </p>
           <p className="mt-6 ml-2 text-lg leading-8 whitespace-normal  ">
-            I am a MERN Stack Developer with a passion for creating and
-            developing web applications. I have experience in building
-            responsive web applications using React, Node.js, Express, and
-            MongoDB. I am a quick learner and always eager to learn new
+            I am a MERN Stack Developer that enjoys creating and developing web
+            applications. I have experience developing responsive web
+            applications with React, Node.js, Express, and MongoDB. I am an
+            agile student who is constantly excited to learn about emerging
             technologies.
           </p>
         </div>

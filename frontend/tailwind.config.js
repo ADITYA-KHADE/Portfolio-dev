@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         poppins: ['Poppins'],
         'bungee-spice': ['"Bungee Spice"', 'cursive'],
+        playwrite: ['"Playwrite US Trad"', 'cursive'],
       },
       width: {
         'narrow': '200px',

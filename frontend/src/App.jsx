@@ -1,20 +1,20 @@
 import { Toaster } from "react-hot-toast";
-import Portfolio from "./pages/Portfolio"
+import Portfolio from "./pages/Portfolio";
 import { ThemeProvider } from "./context/Isdarkmode";
-
 
 function App() {
   return (
     <ThemeProvider>
       <Portfolio />
-      <Toaster />
+      <Toaster position="top-center" reverseOrder={false} />
     </ThemeProvider>
   );
 }
 
 export default App;
 
-{/* <Routes>
+{
+  /* <Routes>
         <Route
           path="/"
           element={authUser ? <Home /> : <Navigate to="/login" />}
@@ -27,4 +27,5 @@ export default App;
           path="/signup"
           element={authUser ? <Navigate to="/" /> : <Signup />}
         />
-      </Routes> */}
+      </Routes> */
+}

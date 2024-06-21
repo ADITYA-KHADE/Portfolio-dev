@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
-import Left_dark from "../../../public/assets/Icon-assets/left-arrow (1).ico";
-import Left_light from "../../../public/assets/Icon-assets/left-arrow.ico";
-import Right_dark from "../../../public/assets/Icon-assets/square-arrow-right.ico";
-import Right_light from "../../../public/assets/Icon-assets/square-arrow-right (1).ico";
-import E_dark from "../../../public/assets/Icon-assets/web-development.ico";
-import E_light from "../../../public/assets/Icon-assets/web-development (2).ico";
+import Left_dark from "/assets/Icon-assets/left-arrow (1).ico";
+import Left_light from "/assets/Icon-assets/left-arrow.ico";
+import Right_dark from "/assets/Icon-assets/square-arrow-right.ico";
+import Right_light from "/assets/Icon-assets/square-arrow-right (1).ico";
+import E_dark from "/assets/Icon-assets/web-development.ico";
+import E_light from "/assets/Icon-assets/web-development (2).ico";
 
 const skills = [
   { id: 1, name: "Technology", type: "tech" },
@@ -119,7 +119,7 @@ const Skills = () => {
       className={`relative isolate font-poppins overflow-hidden ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } py-6 lg:py-6 sm:py-32`}
-      id="skills"
+      id="Skills"
     >
       <div className=" mb-20 ">
         <h2

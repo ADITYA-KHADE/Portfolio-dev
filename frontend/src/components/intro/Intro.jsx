@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 import Typewriter from "typewriter-effect";
 import "../../tailwind.css";
-import handIcon from "../../../public/assets/Icon-assets/hand.ico";
-import Avatar from "../../../public/assets/Icon-assets/avatar2.png"
+import handIcon from "/assets/Icon-assets/hand.ico";
+import Avatar from "/assets/Icon-assets/avatar2.png";
 
 const Intro = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -22,25 +22,19 @@ const Intro = () => {
 
   const texts = [
     "A Web Developer,",
-    "A Designer,",
+    // "A Designer,",
     "An Engineer,",
     "MERN-stack Developer",
     "backend Developer",
     "frontend Developer",
-    //   "full-stack Developer",
-    //   "React Developer",
-    //   "Node Developer",
-    //   "Express Developer",
-    //   "MongoDB Developer",
-    //   "UI/UX Designer",
-    //   "Graphic Designer",
-    //   "Freelancer",
+    "React Developer",
+    "Software Engineer",
   ];
   return (
     <div
       className={`hero min-h-screen ${
         theme === "dark"
-          ? "bg-gray-900 text-slate-300"
+          ? "bg-gray-900 text-white"
           : "bg-white text-gray-900"
       }`}
       id="Home"
@@ -92,28 +86,19 @@ const Intro = () => {
             />
           </div>
           <span className="typewriter_cursor"></span>
-          {/* <p className="py-2 text-3xl font-normal">MERN-stack Developer</p> */}
-          {/* <marquee direction="right">
-            {texts.map((text, index) => (
-              <span
-                key={index}
-                className={`inline-block px-6 py-2 mx-2 bg-gray-200 rounded-full`}
-              >
-                {text}
-              </span>
-            ))}
-          </marquee> */}
-          {/* <p className={`${windowWidth>1024?"narrow-text":"break-words"}`}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p> */}
-          <button className={`btn btn-primary mt-4${
-        theme === "dark"
-          ? " text-slate-300"
-          : " text-gray-900"
-      }`} onClick={()=>{window.open("https://drive.google.com/file/d/1ytYxcm4MMw3pKrjie4ZTk3dMNTw2DArc/view?usp=sharing", "_blank");}}>Resume/CV</button>
+          <button
+            className={`btn btn-primary bg-indigo-600 text-base mt-4${
+              theme === "dark" ? " text-slate-300" : " text-gray-900"
+            } transition-transform duration-200 hover:scale-110`}
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1ytYxcm4MMw3pKrjie4ZTk3dMNTw2DArc/view?usp=sharing",
+                "_blank"
+              );
+            }}
+          >
+            Resume/CV
+          </button>
         </div>
       </div>
     </div>
