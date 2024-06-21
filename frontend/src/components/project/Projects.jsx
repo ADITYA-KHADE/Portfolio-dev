@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 import { Swiper, SwiperSlide } from "swiper/react";
-import E_dark from "../../assets/Icon-assets/checkmark.ico";
-import E_light from "../../assets/Icon-assets/checkmark (2).ico";
+import E_dark from "../../../public/assets/Icon-assets/checkmark.ico";
+import E_light from "../../../public/assets/Icon-assets/checkmark (2).ico";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";

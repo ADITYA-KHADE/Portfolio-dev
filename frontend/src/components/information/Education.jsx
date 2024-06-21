@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
-import School from "../../assets/school.png";
-import College from "../../assets/college.ico";
-import IIITR from "../../assets/Indian_Institute_of_Information_Technology,_Ranchi_Logo.png";
-import E_dark from "../../assets/education-dark.ico";
-import E_light from "../../assets/education-light.ico";
+import School from "../../../public/assets/Icon-assets/school.png";
+import College from "../../../public/assets/Icon-assets/college.ico";
+import IIITR from "../../../public/assets/Icon-assets/Indian_Institute_of_Information_Technology,_Ranchi_Logo.png";
+import E_dark from "../../../public/assets/Icon-assets/education-dark.ico";
+import E_light from "../../../public/assets/Icon-assets/education-light.ico";
 
 const education = [
   {

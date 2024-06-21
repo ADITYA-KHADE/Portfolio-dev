@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 import Typewriter from "typewriter-effect";
 import "../../tailwind.css";
-import handIcon from "../../assets/hand.ico";
-import Avatar from "../../assets/avatar2.png"
+import handIcon from "../../../public/assets/Icon-assets/hand.ico";
+import Avatar from "../../../public/assets/Icon-assets/avatar2.png"
 
 const Intro = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

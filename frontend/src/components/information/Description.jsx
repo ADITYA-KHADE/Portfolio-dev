@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
-import Github_avatar from "../../assets/github coding.png";
-import user_dark from "../../assets/user_dark.ico";
-import user_light from "../../assets/user_light.ico";
+import Github_avatar from "../../../public/assets/Icon-assets/github coding.png";
+import user_dark from "../../../public/assets/Icon-assets/user_dark.ico";
+import user_light from "../../../public/assets/Icon-assets/user_light.ico";
 // const stats = [
 //   { name: "Offices worldwide", value: "12" },
 //   { name: "Full-time colleagues", value: "300+" },

@@ -1,15 +1,15 @@
 import React from "react";
-import Cat_boy from "../../assets/Icon-assets/cat-boy.png";
-import Phone from "../../assets/Icon-assets/phone.ico";
-import Mail from "../../assets/Icon-assets/email.ico";
-import Map from "../../assets/Icon-assets/map.ico";
-import Linkedin from "../../assets/Icon-assets/linkedin (2).ico";
-import Github from "../../assets/Icon-assets/github.ico";
-import Twitter from "../../assets/Icon-assets/twitter.ico";
-import Instagram from "../../assets/Icon-assets/instagram.ico";
-import Whatsapp from "../../assets/Icon-assets/whatsapp.ico";
-import Telegram from "../../assets/Icon-assets/telegram.ico";
-import Coffee from "../../assets/Icon-assets/coffee.ico";
+import Cat_boy from "../../../public/assets/Icon-assets/cat-boy.png";
+import Phone from "../../../public/assets/Icon-assets/phone.ico";
+import Mail from "../../../public/assets/Icon-assets/email.ico";
+import Map from "../../../public/assets/Icon-assets/map.ico";
+import Linkedin from "../../../public/assets/Icon-assets/linkedin (2).ico";
+import Github from "../../../public/assets/Icon-assets/github.ico";
+import Twitter from "../../../public/assets/Icon-assets/twitter.ico";
+import Instagram from "../../../public/assets/Icon-assets/instagram.ico";
+import Whatsapp from "../../../public/assets/Icon-assets/whatsapp.ico";
+import Telegram from "../../../public/assets/Icon-assets/telegram.ico";
+import Coffee from "../../../public/assets/Icon-assets/coffee.ico";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../context/Isdarkmode";
 
