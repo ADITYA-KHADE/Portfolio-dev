@@ -58,15 +58,30 @@ const login = async(req, res) => {
 
 const logout = async(req, res) => {
     try {
-        res.clearCookie("_id");
+        res.clearCookie('_id');
+
+        // const {id}=req.body;
+        // authTokenGenerate(user._id,res);
+        
         res.status(200).json({message:"User logged out successfully"})
     } catch (error) {
         res.status(500).send(error.message)
     }
 }
 
+const getToken = async (req, res) => {
+    try {
+      const {id}=req.body;
+      authTokenGenerate(id, res);
+      res.status(200).json({ message: "Token generated successfully" });
+      } catch (error) {
+      res.status(500).send(error.message);
+      console.log(error.message, "getToken");
+      }
+  }
 module.exports = {
     signup,
     login,
-    logout
+    logout,
+    getToken
 }
