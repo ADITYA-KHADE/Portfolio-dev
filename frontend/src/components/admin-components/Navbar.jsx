@@ -167,21 +167,22 @@ const Navbar = ({ mode, setMode }) => {
                 {navigation.map((item) => (
                   <div
                     key={item.name}
-                    onClick={() => setMode(item.id)}
+                    onClick={() => {setMode(item.id);
+                      setMobileMenuOpen(false)}
+                    }
                     className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-semibold leading-7"
                   >
                     {item.name}
                   </div>
                 ))}
               </div>
-              <div className="flex text-base font-semibold">
+              <div className="flex text-base font-semibold" onClick={() => 
+                    handlelogout()
+                  }>
                 logout
                 <img
                   src={theme === "dark" ? LogoutW : Logout}
                   className=" h-5 w-5 cursor-pointer"
-                  onClick={() => 
-                    handlelogout()
-                  }
                 />
               </div>
             </div>
