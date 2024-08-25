@@ -55,7 +55,7 @@ const Navbar = ({ mode, setMode }) => {
     <header
       className={`${
         theme === "dark"
-          ? "bg-gray-900 text-white"
+          ? "bg-gray-800 text-white"
           : "bg-slate-100 text-gray-900"
       } sticky top-0 z-50 px-2 py-2`}
     >

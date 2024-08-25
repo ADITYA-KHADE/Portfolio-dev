@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`${theme === "dark" ? "bg-gray-900 text-white" : "bg-slate-100 text-gray-900"} sticky top-0 z-50 px-2 py-2`}>
+    <header className={`${theme === "dark" ? "bg-gray-800 text-white" : "bg-slate-100 text-gray-900"} sticky top-0 z-50 px-2 py-2`}>
       <nav className="container mx-auto px-6 lg:px-8 flex items-center justify-between" aria-label="Global">
         {windowWidth > 1024 && <div className="flex lg:flex-1"></div>}
         <div className="flex items-center">
