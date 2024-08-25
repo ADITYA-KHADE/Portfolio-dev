@@ -162,14 +162,14 @@ const All = () => {
                     Type
                   </th>
                   <th
-                    className={`py-2 px-3 border-b hidden sm:block${
+                    className={`py-2 px-3 border-b ${windowWidth<500 ? "hidden":""} ${
                       theme === "dark" ? "border-gray-600" : "border-gray-300"
                     }`}
                   >
                     Created At
                   </th>
                   <th
-                    className={`py-2 px-3 border-b hidden sm:block${
+                    className={`py-2 px-3 border-b ${windowWidth<430 ? "hidden":""}  ${
                       theme === "dark" ? "border-gray-600" : "border-gray-300"
                     }`}
                   >
@@ -224,14 +224,14 @@ const All = () => {
                       {skill.type}
                     </td>
                     <td
-                      className={`py-2 px-3 border-b hidden sm:block ${
+                      className={`py-2 px-3 border-b ${windowWidth<500 ? "hidden":""}  ${
                         theme === "dark" ? "border-gray-600" : "border-gray-300"
                       }`}
                     >
                       {new Date(skill.createdAt).toLocaleDateString()}
                     </td>
                     <td
-                      className={`py-2 px-4 border-b hidden sm:block ${
+                      className={`py-2 px-4 border-b ${windowWidth<430 ? "hidden":""}  ${
                         theme === "dark" ? "border-gray-600" : "border-gray-300"
                       }`}
                     >
@@ -276,7 +276,7 @@ const All = () => {
             <thead>
               <tr>
                 <th
-                  className={`py-2 px-3 border-b hidden sm:block ${
+                  className={`py-2 px-3 border-b ${windowWidth<500 ? "hidden":""} ${
                     theme === "dark" ? "border-gray-600" : "border-gray-300"
                   }`}
                 >
@@ -290,7 +290,7 @@ const All = () => {
                   Project Name
                 </th>
                 <th
-                  className={`py-2 px-3 border-b hidden md:block ${
+                  className={`py-2 px-3 border-b ${windowWidth<550 ? "hidden":""}  ${
                     theme === "dark" ? "border-gray-600" : "border-gray-300"
                   }`}
                 >
@@ -304,7 +304,7 @@ const All = () => {
                   Technologies
                 </th>
                 <th
-                  className={`py-2 px-3 border-b hidden sm:block ${
+                  className={`py-2 px-3 border-b ${windowWidth<600 ? "hidden":""} ${
                     theme === "dark" ? "border-gray-600" : "border-gray-300"
                   }`}
                 >
@@ -335,14 +335,13 @@ const All = () => {
                   }
                 >
                   <td
-                    className={`py-2 px-3 border-b hidden sm:block${
+                    className={`py-2 px-3 border-b ${windowWidth<500 ? "hidden":""} ${
                       theme === "dark" ? "border-gray-600" : "border-gray-300"
                     } text-center`}
                   >
                     <img
-                    className="h-16 w-16 object-contain mx-auto cursor-pointer "
+                      className="h-16 w-16 object-contain mx-auto cursor-pointer "
                       src={
-                        
                         theme === "dark"
                           ? `${Server_Url}${project.photo}`
                           : `${Server_Url}${project.photo}`
@@ -361,7 +360,7 @@ const All = () => {
                     {project.name}
                   </td>
                   <td
-                    className={`py-2 px-3 border-b hidden md:block ${
+                    className={`py-2 px-3 border-b ${windowWidth<550 ? "hidden":""} ${
                       theme === "dark" ? "border-gray-600" : "border-gray-300"
                     }`}
                   >
@@ -375,7 +374,7 @@ const All = () => {
                     {project.technologies.join(", ")}
                   </td>
                   <td
-                    className={`py-2 px-3 border-b hidden sm:block ${
+                    className={`py-2 px-3 border-b ${windowWidth<600 ? "hidden":""} ${
                       theme === "dark" ? "border-gray-600" : "border-gray-300"
                     }`}
                   >
