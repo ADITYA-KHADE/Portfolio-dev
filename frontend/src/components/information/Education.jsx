@@ -55,11 +55,12 @@ const Education = () => {
           ? "bg-gray-900 text-white"
           : "bg-white text-gray-900"
       } py-16 sm:py-32`}
-      id="Education"
+      
     >
       <div>
         <h2
           className={`text-3xl font-bold tracking-tight mt-10 sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
+          id="Education"
         >
           <img
             src={theme === "dark" ? E_light : E_dark}
@@ -68,7 +69,7 @@ const Education = () => {
           />
           &nbsp;Education
         </h2>
-        <div className="space-y-6 mt-24 px-4 lg:px-20">
+        <div className="space-y-6 mt-24 px-4 lg:px-20 " >
           {education.map((edu, index) => (
             <div
               key={index}

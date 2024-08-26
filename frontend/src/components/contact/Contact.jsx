@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <div
-    id="Contact"
+    
       className={`isolate ${
         theme === "dark"
           ? "bg-gray-900 text-white"
@@ -60,7 +60,8 @@ const Contact = () => {
         <img
           src={theme === "dark" ? E_light : E_dark}
           alt="Education Icon"
-          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" 
+          id="Contact"
         />
         &nbsp;Get in Touch
       </h2>
