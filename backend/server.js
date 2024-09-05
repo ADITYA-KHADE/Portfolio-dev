@@ -41,6 +41,9 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
 });
 
+app.get("/health",(req, res)=>{
+  return res.json({message : "Healthy"});
+})
 
 app.listen(PORT, () => {
   console.log(`Server is Listening on http://localhost:${PORT}`);
