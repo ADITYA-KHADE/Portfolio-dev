@@ -57,17 +57,16 @@ const Projects = () => {
 
   return (
     <div
-      id="Projects"
       className={`${
         theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-white"
       } flex flex-col py-20 font-poppins`}
     >
-      <div>
+      <div >
         <h2
           className={`text-3xl font-bold tracking-tight mt-10 py-4
              sm:text-4xl md:text-5xl flex justify-center lg:mt-8`}
         >
-          <img
+          <img id="Projects"
             src={theme === "dark" ? E_light : E_dark}
             alt="Projects Icon"
             className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
@@ -75,7 +74,7 @@ const Projects = () => {
           &nbsp;Projects
         </h2>
       </div>
-      <div>
+      <div >
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -103,7 +102,11 @@ const Projects = () => {
                 <div
                   id="container"
                   className={`
-                    ${theme==="dark" ?"bg-gray-900 text-white":"bg-gray-900 text-white"}
+                    ${
+                      theme === "dark"
+                        ? "bg-gray-900 text-white"
+                        : "bg-gray-900 text-white"
+                    }
                      font-semibold flex flex-col justify-between p-4 h-full`}
                 >
                   <h3 className="text-xl mb:1 md:mb-2 text-center">
@@ -133,7 +136,8 @@ const Projects = () => {
                         theme === "dark"
                           ? "bg-indigo-400 text-black hover:bg-blue-700"
                           : "text-black bg-white hover:bg-slate-300"
-                      } font-medium sm:font-bold py-1 px-1 lg:py-2 lg:px-2 border-white border-2 rounded-2xl transition-transform duration-200 hover:scale-110`}                    >
+                      } font-medium sm:font-bold py-1 px-1 lg:py-2 lg:px-2 border-white border-2 rounded-2xl transition-transform duration-200 hover:scale-110`}
+                    >
                       Deploy link
                     </button>
                   </div>
