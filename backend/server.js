@@ -43,7 +43,8 @@ app.get("*", (req, res) => {
 
 app.get("/health",(req, res)=>{
   return res.json({message : "Healthy"});
-})
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is Listening on http://localhost:${PORT}`);
