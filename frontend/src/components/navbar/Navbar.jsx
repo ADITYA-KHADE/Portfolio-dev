@@ -101,11 +101,13 @@ const Navbar = () => {
         </div>
       </nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <DialogPanel className={`${theme === "dark" ? "bg-gray-900 text-white" : "bg-slate-100 text-gray-900"} fixed inset-0 z-50 overflow-y-auto px-6 py-6 lg:hidden`}>
+        <DialogPanel className={`${
+    theme === "dark" ? "bg-gray-700 text-white" : "bg-slate-100 text-gray-900"
+  } fixed top-0 right-0 z-50 overflow-y-auto px-6 py-6 lg:hidden w-40 lg:w-70 md:w-60 h-full`}>
           <div className="flex items-center justify-between">
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5"
+              className="-m-2.5 rounded-md p-2.5  right-10 top-5 fixed"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
