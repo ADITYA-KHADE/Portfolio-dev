@@ -103,7 +103,7 @@ const Navbar = () => {
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <DialogPanel className={`${
     theme === "dark" ? "bg-gray-700 text-white" : "bg-slate-100 text-gray-900"
-  } fixed top-0 right-0 z-50 overflow-y-auto px-6 py-6 lg:hidden w-40 lg:w-70 md:w-60 h-full`}>
+  } fixed top-0 right-0 z-50 overflow-y-auto px-6 py-6 lg:hidden w-60 lg:w-90 md:w-70 h-full`}>
           <div className="flex items-center justify-between">
             <button
               type="button"
