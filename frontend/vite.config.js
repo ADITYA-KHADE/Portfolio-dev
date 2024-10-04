@@ -1,9 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { ViteSitemap } from 'vite-plugin-sitemap';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    ViteSitemap({
+      hostname: 'https://myadityakhade.tech', 
+      routes: [
+        '/',
+        '/admin',
+      ]
+    }),
+  ],
   server: {
     port: 3000,
     host:'0.0.0.0',
