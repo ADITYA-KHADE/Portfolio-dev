@@ -23,7 +23,8 @@
     "swiper": "^11.1.4",
     "typeface-poppins": "^1.1.13",
     "typeit-react": "^2.7.1",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vite-plugin-sitemap": "^0.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
